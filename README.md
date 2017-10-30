@@ -17,14 +17,6 @@ Apple's solution is to display a self-removing and small modal view to the scree
 With uses in the News app, the Apple Music app, and the Podcasts app, developers have been wanting access to this view for a while now.
 That is what this framework solves.
 
-## Design
-
-<img src="https://user-images.githubusercontent.com/20458718/31578023-a6b69166-b0de-11e7-8446-7ef0d22da452.png" width="250px" />
-<img src="https://user-images.githubusercontent.com/20458718/31578226-7cd123b2-b0e2-11e7-8f46-0b00cc8ad865.gif" width="250px" />
-
-
-The animation lasts two seconds, but I had trouble getting the gif to perform at the correct speed.
-
 ## Instructions
 
 Simply import the framework and add the following code to get started.

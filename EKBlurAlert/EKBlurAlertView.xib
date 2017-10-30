@@ -24,7 +24,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6zq-F0-2gC">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="6zq-F0-2gC">
                         <rect key="frame" x="50" y="10" width="130" height="130"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="130" id="cKS-XF-hXt"/>
@@ -64,4 +64,7 @@
             <point key="canvasLocation" x="-33" y="-37"/>
         </visualEffectView>
     </objects>
+    <resources>
+        <image name="apple logo.png" width="600" height="600"/>
+    </resources>
 </document>

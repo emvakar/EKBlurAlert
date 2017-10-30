@@ -12,6 +12,10 @@
 		2094F4121FA766EE002F5799 /* EKBlurAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 2094F4041FA766ED002F5799 /* EKBlurAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2094F41C1FA7673E002F5799 /* EKBlurAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094F41B1FA7673E002F5799 /* EKBlurAlertView.swift */; };
 		2094F41E1FA7676D002F5799 /* EKBlurAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2094F41D1FA7676D002F5799 /* EKBlurAlertView.xib */; };
+		2094F42E1FA78090002F5799 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2094F42D1FA78090002F5799 /* README.md */; };
+		2094F4321FA787C7002F5799 /* apple logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2094F42F1FA787C6002F5799 /* apple logo@3x.png */; };
+		2094F4331FA787C7002F5799 /* apple logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2094F4301FA787C6002F5799 /* apple logo.png */; };
+		2094F4341FA787C7002F5799 /* apple logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2094F4311FA787C6002F5799 /* apple logo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 		2094F4111FA766ED002F5799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2094F41B1FA7673E002F5799 /* EKBlurAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKBlurAlertView.swift; sourceTree = "<group>"; };
 		2094F41D1FA7676D002F5799 /* EKBlurAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EKBlurAlertView.xib; sourceTree = "<group>"; };
+		2094F42D1FA78090002F5799 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		2094F42F1FA787C6002F5799 /* apple logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple logo@3x.png"; sourceTree = "<group>"; };
+		2094F4301FA787C6002F5799 /* apple logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple logo.png"; sourceTree = "<group>"; };
+		2094F4311FA787C6002F5799 /* apple logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple logo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +86,9 @@
 				2094F4041FA766ED002F5799 /* EKBlurAlert.h */,
 				2094F41B1FA7673E002F5799 /* EKBlurAlertView.swift */,
 				2094F41D1FA7676D002F5799 /* EKBlurAlertView.xib */,
+				2094F4351FA787CE002F5799 /* Apple Logo */,
 				2094F4051FA766ED002F5799 /* Info.plist */,
+				2094F42D1FA78090002F5799 /* README.md */,
 			);
 			path = EKBlurAlert;
 			sourceTree = "<group>";
@@ -90,6 +100,16 @@
 				2094F4111FA766ED002F5799 /* Info.plist */,
 			);
 			path = EKBlurAlertTests;
+			sourceTree = "<group>";
+		};
+		2094F4351FA787CE002F5799 /* Apple Logo */ = {
+			isa = PBXGroup;
+			children = (
+				2094F4301FA787C6002F5799 /* apple logo.png */,
+				2094F4311FA787C6002F5799 /* apple logo@2x.png */,
+				2094F42F1FA787C6002F5799 /* apple logo@3x.png */,
+			);
+			path = "Apple Logo";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +206,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2094F4331FA787C7002F5799 /* apple logo.png in Resources */,
+				2094F42E1FA78090002F5799 /* README.md in Resources */,
 				2094F41E1FA7676D002F5799 /* EKBlurAlertView.xib in Resources */,
+				2094F4341FA787C7002F5799 /* apple logo@2x.png in Resources */,
+				2094F4321FA787C7002F5799 /* apple logo@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

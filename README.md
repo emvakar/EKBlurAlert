@@ -50,7 +50,7 @@ func presentBluredAlertView() {
     alertView.set(image: myImage)
     alertView.set(headline: "Head Title text")
     alertView.set(subheading: "subtitle text")
-    view.addSubview(modalView)
+    view.addSubview(alertView)
 }
 ```
 ## Features

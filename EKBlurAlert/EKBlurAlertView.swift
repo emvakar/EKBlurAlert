@@ -7,28 +7,168 @@
 //
 
 import UIKit
+import SnapKit
+
+enum ShowType {
+    case noTexts
+    case withTitle
+    case withSubtitle
+}
 
 public class EKBlurAlertView: UIView {
 
-    @IBOutlet weak var alertImage: UIImageView!
-    @IBOutlet weak var headline_label: UILabel!
-    @IBOutlet weak var subheadline_lablel: UILabel!
-    
-    let nibName = "EKBlurAlertView"
-    var contentView: UIView!
-    var viewCornerRadius: CGFloat = 0.0
-    var timer: Timer?
-    var autoFade: Bool = true
-    var timeAfter: Double = 3.0
-    
-    public override init(frame: CGRect) {
+    private var alertImage: UIImageView!
+    private var titleLabel: UILabel!
+    private var subtitleLabel: UILabel!
+    private var blurView: UIVisualEffectView!
+
+    private var contentView: UIView = UIView()
+    private var viewCornerRadius: CGFloat = 8
+    private var timer: Timer?
+    private var autoFade: Bool = true
+    private var timeAfter: Double = 0.7
+
+    public init(
+        frame: CGRect, titleFont: UIFont = UIFont.systemFont(ofSize: 17, weight: .regular),
+        subTitleFont: UIFont = UIFont.systemFont(ofSize: 14, weight: .regular),
+        image: UIImage = ImageProvider.getImage("apple_logo") ?? UIImage(),
+        title: String? = nil,
+        subtitle: String? = nil,
+        autoFade: Bool = true,
+        after: Double = 0.7,
+        radius: CGFloat = 8,
+        blurEffect: UIBlurEffect.Style = .dark) {
+
         super.init(frame: frame)
-        setUpView()
+        self.createUI(with: image, blurEffect: blurEffect)
+        self.setup(title: title, subtitle: subtitle, autoFade: autoFade, after: after, radius: radius, titleFont: titleFont, subTitleFont: subTitleFont)
     }
-    
+
+
+    private func createUI(with image: UIImage, blurEffect: UIBlurEffect.Style = .dark) {
+
+        self.alertImage = UIImageView(image: image)
+
+        self.titleLabel = UILabel()
+        self.titleLabel.numberOfLines = 0
+        self.titleLabel.textAlignment = .center
+        self.titleLabel.textColor = UIColor.lightText
+
+        self.subtitleLabel = UILabel()
+        self.subtitleLabel.numberOfLines = 0
+        self.subtitleLabel.textAlignment = .center
+        self.subtitleLabel.textColor = UIColor.lightText
+
+        self.blurView = UIVisualEffectView(effect: UIBlurEffect(style: blurEffect))
+
+        self.contentView.alpha = 0.0
+        self.contentView.addSubview(self.blurView)
+        self.contentView.addSubview(self.alertImage)
+        self.contentView.addSubview(self.titleLabel)
+        self.contentView.addSubview(self.subtitleLabel)
+
+    }
+
+    private func setupConstraints() {
+
+        self.contentView.center = self.center
+        self.contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.contentView.translatesAutoresizingMaskIntoConstraints = true
+        self.addSubview(self.contentView)
+
+        if self.titleLabel.text != nil {
+
+            if self.subtitleLabel.text != nil {
+
+                self.setupContetViewContraints(type: ShowType.withSubtitle)
+
+                self.alertImage.snp.makeConstraints { (make) in
+                    make.top.equalToSuperview().offset(30)
+                    make.left.equalToSuperview().offset(30)
+                    make.right.equalToSuperview().offset(-30)
+                    make.height.equalTo(self.contentView.snp.width).offset(-60)
+                }
+
+                self.titleLabel.snp.makeConstraints { (make) in
+                    make.top.equalTo(self.alertImage.snp.bottom).offset(15)
+                    make.left.equalToSuperview().offset(15)
+                    make.right.equalToSuperview().offset(-15)
+                    make.height.greaterThanOrEqualTo(21)
+                }
+
+                self.subtitleLabel.snp.makeConstraints { (make) in
+                    make.top.equalTo(self.titleLabel.snp.bottom).offset(8)
+                    make.left.equalToSuperview().offset(15)
+                    make.right.equalToSuperview().offset(-15)
+                    make.height.greaterThanOrEqualTo(21)
+                    make.bottom.equalToSuperview().offset(-15)
+                }
+
+            } else {
+
+                self.setupContetViewContraints(type: ShowType.withTitle)
+
+                self.alertImage.snp.makeConstraints { (make) in
+                    make.top.equalToSuperview().offset(30)
+                    make.left.equalToSuperview().offset(30)
+                    make.right.equalToSuperview().offset(-30)
+                    make.height.equalTo(self.contentView.snp.width).offset(-60)
+                }
+
+                self.titleLabel.snp.makeConstraints { (make) in
+                    make.top.equalTo(self.alertImage.snp.bottom).offset(15)
+                    make.left.equalToSuperview().offset(15)
+                    make.right.equalToSuperview().offset(-15)
+                    make.height.greaterThanOrEqualTo(21)
+                    make.bottom.equalToSuperview().offset(-15)
+                }
+            }
+
+
+        } else {
+
+            self.setupContetViewContraints(type: ShowType.noTexts)
+
+            self.alertImage.snp.makeConstraints { (make) in
+
+                make.top.equalToSuperview().offset(30)
+                make.left.equalToSuperview().offset(30)
+                make.right.equalToSuperview().offset(-30)
+                make.bottom.equalToSuperview().offset(-30)
+                make.width.equalTo(self.contentView.snp.width).offset(-60)
+                make.height.equalTo(self.contentView.snp.width).offset(-60)
+
+            }
+
+        }
+    }
+
+    fileprivate func setupContetViewContraints(type: ShowType) {
+
+        self.contentView.snp.makeConstraints { (make) in
+
+            make.center.equalToSuperview()
+            make.width.equalTo(self.frame.width / 2)
+
+//            switch type {
+//            case .noTexts:
+//                make.height.equalTo(self.frame.width / 2)
+//            case .withTitle:
+//                make.height.equalTo((self.frame.width / 3) * 2)
+//            case .withSubtitle:
+//                make.height.equalTo((self.frame.width / 5) * 3)
+//            }
+
+        }
+
+        self.blurView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setUpView()
+        self.createUI(with: UIImage(), blurEffect: UIBlurEffect.Style.dark)
     }
 
     fileprivate func cornerRadius(_ radius: CGFloat = 0.0) {
@@ -36,12 +176,12 @@ public class EKBlurAlertView: UIView {
         self.contentView.layer.masksToBounds = self.contentView.layer.cornerRadius > 0
         self.contentView.clipsToBounds = self.contentView.layer.cornerRadius > 0
     }
-    
+
     public override func layoutSubviews() {
         self.layoutIfNeeded()
         cornerRadius(viewCornerRadius)
     }
-    
+
     public override func didMoveToSuperview() {
         self.contentView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         UIView.animate(withDuration: 0.15, animations: {
@@ -55,45 +195,35 @@ public class EKBlurAlertView: UIView {
             }
         }
     }
-    
+
     @objc private func removeSelf() {
         UIView.animate(withDuration: 0.15, animations: {
-                self.contentView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.contentView.alpha = 0.0
+            self.contentView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.contentView.alpha = 0.0
         }) { _ in
             self.removeFromSuperview()
         }
     }
-    
-    private func setUpView() {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: self.nibName, bundle: bundle)
-        self.contentView = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        addSubview(contentView)
-        
-        contentView.center = self.center
-        contentView.autoresizingMask = []
-        contentView.translatesAutoresizingMaskIntoConstraints = true
-        
-        headline_label.text = ""
-        subheadline_lablel.text = ""
-        self.contentView.alpha = 0.0
-    }
-    
-    public func setCornerRadius(_ radius: CGFloat) {
+
+    public func setup(title: String? = nil,
+        subtitle: String? = nil,
+        autoFade: Bool = true,
+        after: Double = 3.0,
+        radius: CGFloat = 8,
+        titleFont: UIFont = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular),
+        subTitleFont: UIFont = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)) {
+
         self.viewCornerRadius = radius
-    }
-    public func set(image: UIImage) {
-        self.alertImage.image = image
-    }
-    public func set(headline text: String) {
-        self.headline_label.text = text
-    }
-    public func set(subheading text: String) {
-        self.subheadline_lablel.text = text
-    }
-    public func set(autoFade: Bool = true, after: Double = 3.0) {
+
+        self.titleLabel.text = title
+        self.titleLabel.font = titleFont
+
+        self.subtitleLabel.text = subtitle
+        self.subtitleLabel.font = subTitleFont
+
         self.autoFade = autoFade
         self.timeAfter = after
+
+        self.setupConstraints()
     }
 }

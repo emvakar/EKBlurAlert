@@ -30,6 +30,8 @@ Simply import the framework and add the following code to get started.
 
 ### How to use
 
+Empty setup with test parameters simple:
+
 ```swift
 import EKBlurAlert
 
@@ -37,22 +39,27 @@ let alertView = EKBlurAlertView(frame: self.view.bounds)
 view.addSubview(alertView)
 ```
 
-Further customize the EKBlurAlertView with the following functions:
+Or fully customize the EKBlurAlertView with the following parameters:
 
 ```swift
 import EKBlurAlert
 
 func presentBluredAlertView() {
-    let alertView = EKBlurAlertView(frame: self.view.bounds)
-    let myImage = UIImage(named: "yourImageName") ?? UIImage()
-    alertView.setCornerRadius(10)
-    alertView.set(autoFade: true, after: 7)
-    alertView.set(image: myImage)
-    alertView.set(headline: "Head Title text")
-    alertView.set(subheading: "subtitle text")
+    let alertView = EKBlurAlertView(frame: self.view.bounds,
+                                    titleFont: UIFont.systemFont(ofSize: 17),
+                                    subTitleFont: UIFont.systemFont(ofSize: 17),
+                                    image: UIImage(),
+                                    title: "my Title",
+                                    subTitle: "My subtitle",
+                                    autoFade: true,
+                                    after: 0.6,
+                                    radius: 15,
+                                    blurEffect: .dark)
     view.addSubview(alertView)
 }
 ```
+
+
 ## Features
 
 ### Animations

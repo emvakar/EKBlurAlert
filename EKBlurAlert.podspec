@@ -8,7 +8,7 @@ s.summary = "EKBlurAlert swift 4 framework for BluredView."
 s.requires_arc = true
 
 # 2
-s.version = "1.0.0"
+s.version = "1.0.1"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -24,11 +24,14 @@ s.source = { :git => "https://github.com/emvakar/EKBlurAlert.git", :tag => "#{s.
 
 # 7
 s.framework = "UIKit"
-# s.dependency 'Alamofire', '~> 2.0'
+s.dependency 'SnapKit', '4.2.0'
 
 # 8
 s.source_files = "EKBlurAlert/**/*.{swift}"
 
 # 9
 s.resources = "EKBlurAlert/**/*.{png,jpeg,jpg,storyboard,xib}"
+s.resource_bundles = {
+    'EKBlurAlertAssets' => ['EKBlurAlert/**/*.xcassets']
+}
 end

@@ -11,12 +11,14 @@
 		2094F4101FA766ED002F5799 /* EKBlurAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094F40F1FA766ED002F5799 /* EKBlurAlertTests.swift */; };
 		2094F4121FA766EE002F5799 /* EKBlurAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 2094F4041FA766ED002F5799 /* EKBlurAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2094F41C1FA7673E002F5799 /* EKBlurAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094F41B1FA7673E002F5799 /* EKBlurAlertView.swift */; };
-		2094F41E1FA7676D002F5799 /* EKBlurAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2094F41D1FA7676D002F5799 /* EKBlurAlertView.xib */; };
-		2094F4331FA787C7002F5799 /* apple_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2094F4301FA787C6002F5799 /* apple_logo.png */; };
 		2094F4381FA78AD0002F5799 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2094F4361FA78AD0002F5799 /* README.md */; };
 		2094F4391FA78AD0002F5799 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2094F4371FA78AD0002F5799 /* LICENSE */; };
 		2094F43B1FA78AFD002F5799 /* EKBlurAlert.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2094F43A1FA78AFD002F5799 /* EKBlurAlert.podspec */; };
 		2094F43D1FA791F9002F5799 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = 2094F43C1FA791F9002F5799 /* .swift-version */; };
+		20B79973218D32410048FE23 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B79972218D32410048FE23 /* Media.xcassets */; };
+		20B79976218D43DE0048FE23 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B79975218D43DE0048FE23 /* ImageProvider.swift */; };
+		853DFB93C048CDE276217023 /* Pods_EKBlurAlertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F03E5CCCC9D818BFAFA1E5A /* Pods_EKBlurAlertTests.framework */; };
+		A6D298794BCC9F5A90F6831B /* Pods_EKBlurAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E54288EBFDB77B45606BA3 /* Pods_EKBlurAlert.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +39,18 @@
 		2094F40F1FA766ED002F5799 /* EKBlurAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKBlurAlertTests.swift; sourceTree = "<group>"; };
 		2094F4111FA766ED002F5799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2094F41B1FA7673E002F5799 /* EKBlurAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKBlurAlertView.swift; sourceTree = "<group>"; };
-		2094F41D1FA7676D002F5799 /* EKBlurAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EKBlurAlertView.xib; sourceTree = "<group>"; };
-		2094F4301FA787C6002F5799 /* apple_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple_logo.png; sourceTree = "<group>"; };
 		2094F4361FA78AD0002F5799 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2094F4371FA78AD0002F5799 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2094F43A1FA78AFD002F5799 /* EKBlurAlert.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EKBlurAlert.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2094F43C1FA791F9002F5799 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		20B79972218D32410048FE23 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		20B79975218D43DE0048FE23 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		26E54288EBFDB77B45606BA3 /* Pods_EKBlurAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKBlurAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C9F35F59EF0198E854D7D9 /* Pods-EKBlurAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKBlurAlert.release.xcconfig"; path = "Pods/Target Support Files/Pods-EKBlurAlert/Pods-EKBlurAlert.release.xcconfig"; sourceTree = "<group>"; };
+		3F03E5CCCC9D818BFAFA1E5A /* Pods_EKBlurAlertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKBlurAlertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4174181848196BFD4717D867 /* Pods-EKBlurAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKBlurAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EKBlurAlert/Pods-EKBlurAlert.debug.xcconfig"; sourceTree = "<group>"; };
+		BC1C06C78407D2AA5F0316A4 /* Pods-EKBlurAlertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKBlurAlertTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EKBlurAlertTests/Pods-EKBlurAlertTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDACB6524E13FFCC06FE39F9 /* Pods-EKBlurAlertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKBlurAlertTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EKBlurAlertTests/Pods-EKBlurAlertTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D298794BCC9F5A90F6831B /* Pods_EKBlurAlert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2094F40B1FA766ED002F5799 /* EKBlurAlert.framework in Frameworks */,
+				853DFB93C048CDE276217023 /* Pods_EKBlurAlertTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +84,8 @@
 				2094F4031FA766ED002F5799 /* EKBlurAlert */,
 				2094F40E1FA766ED002F5799 /* EKBlurAlertTests */,
 				2094F4021FA766ED002F5799 /* Products */,
+				7D5860B6C65AAFA645E6E468 /* Pods */,
+				2A46814C9F01CA1E9D4DD651 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,8 +103,8 @@
 			children = (
 				2094F4041FA766ED002F5799 /* EKBlurAlert.h */,
 				2094F41B1FA7673E002F5799 /* EKBlurAlertView.swift */,
-				2094F41D1FA7676D002F5799 /* EKBlurAlertView.xib */,
-				2094F4301FA787C6002F5799 /* apple_logo.png */,
+				20B79975218D43DE0048FE23 /* ImageProvider.swift */,
+				20B79972218D32410048FE23 /* Media.xcassets */,
 				2094F4051FA766ED002F5799 /* Info.plist */,
 			);
 			path = EKBlurAlert;
@@ -105,6 +117,26 @@
 				2094F4111FA766ED002F5799 /* Info.plist */,
 			);
 			path = EKBlurAlertTests;
+			sourceTree = "<group>";
+		};
+		2A46814C9F01CA1E9D4DD651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26E54288EBFDB77B45606BA3 /* Pods_EKBlurAlert.framework */,
+				3F03E5CCCC9D818BFAFA1E5A /* Pods_EKBlurAlertTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D5860B6C65AAFA645E6E468 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4174181848196BFD4717D867 /* Pods-EKBlurAlert.debug.xcconfig */,
+				28C9F35F59EF0198E854D7D9 /* Pods-EKBlurAlert.release.xcconfig */,
+				BC1C06C78407D2AA5F0316A4 /* Pods-EKBlurAlertTests.debug.xcconfig */,
+				DDACB6524E13FFCC06FE39F9 /* Pods-EKBlurAlertTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2094F4151FA766EE002F5799 /* Build configuration list for PBXNativeTarget "EKBlurAlert" */;
 			buildPhases = (
+				7D1B64730656EDC5D7C67E1F /* [CP] Check Pods Manifest.lock */,
 				2094F3FC1FA766ED002F5799 /* Sources */,
 				2094F3FD1FA766ED002F5799 /* Frameworks */,
 				2094F3FE1FA766ED002F5799 /* Headers */,
@@ -143,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2094F4181FA766EE002F5799 /* Build configuration list for PBXNativeTarget "EKBlurAlertTests" */;
 			buildPhases = (
+				28B86F5109DA55567836B6C4 /* [CP] Check Pods Manifest.lock */,
 				2094F4061FA766ED002F5799 /* Sources */,
 				2094F4071FA766ED002F5799 /* Frameworks */,
 				2094F4081FA766ED002F5799 /* Resources */,
+				E3B1FFDB0F65187DDE19127C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,11 +237,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2094F4381FA78AD0002F5799 /* README.md in Resources */,
-				2094F4331FA787C7002F5799 /* apple_logo.png in Resources */,
 				2094F4391FA78AD0002F5799 /* LICENSE in Resources */,
 				2094F43D1FA791F9002F5799 /* .swift-version in Resources */,
+				20B79973218D32410048FE23 /* Media.xcassets in Resources */,
 				2094F43B1FA78AFD002F5799 /* EKBlurAlert.podspec in Resources */,
-				2094F41E1FA7676D002F5799 /* EKBlurAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,11 +253,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28B86F5109DA55567836B6C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EKBlurAlertTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D1B64730656EDC5D7C67E1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EKBlurAlert-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3B1FFDB0F65187DDE19127C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EKBlurAlertTests/Pods-EKBlurAlertTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EKBlurAlertTests/Pods-EKBlurAlertTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2094F3FC1FA766ED002F5799 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B79976218D43DE0048FE23 /* ImageProvider.swift in Sources */,
 				2094F41C1FA7673E002F5799 /* EKBlurAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +466,7 @@
 		};
 		2094F4161FA766EE002F5799 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4174181848196BFD4717D867 /* Pods-EKBlurAlert.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -385,6 +490,7 @@
 		};
 		2094F4171FA766EE002F5799 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C9F35F59EF0198E854D7D9 /* Pods-EKBlurAlert.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -407,6 +513,7 @@
 		};
 		2094F4191FA766EE002F5799 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC1C06C78407D2AA5F0316A4 /* Pods-EKBlurAlertTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,6 +529,7 @@
 		};
 		2094F41A1FA766EE002F5799 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDACB6524E13FFCC06FE39F9 /* Pods-EKBlurAlertTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

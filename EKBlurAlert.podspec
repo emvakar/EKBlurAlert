@@ -24,7 +24,7 @@ s.source = { :git => "https://github.com/emvakar/EKBlurAlert.git", :tag => "#{s.
 
 # 7
 s.framework = "UIKit"
-s.dependency 'SnapKit', '4.2.0'
+s.dependency 'SnapKit'
 
 # 8
 s.source_files = "EKBlurAlert/**/*.{swift}"

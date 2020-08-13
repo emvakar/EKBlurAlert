@@ -5,4 +5,3 @@ notifications:
 script:
   - swift package generate-xcodeproj
   - xcodebuild build -sdk iphoneos -scheme 'EKBlurAlert-Package'
-  - xcodebuild test -destination 'name=iPhone 8' -scheme 'EKBlurAlert-Package'

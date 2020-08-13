@@ -1,23 +1,23 @@
 //
-//  ImageProvider.swift
+//  EKImageProvider.swift
 //  EKBlurAlert
 //
-//  Created by Emil Karimov on 03/11/2018.
-//  Copyright © 2018 Emil Karimov. All rights reserved.
+//  Created by Emil Karimov on 13/08/2020.
+//  Copyright © 2020 Emil Karimov. All rights reserved.
 //
 
 import UIKit
 
-public class ImageProvider: NSObject {
+class EKImageProvider: NSObject {
     
     private static var bundle: Bundle?
     private static let onceTracker: () = {
         
-        if let bundleURL = Bundle(for: ImageProvider.self).url(forResource: "EKBlurAlertAssets", withExtension: "bundle") {
+        if let bundleURL = Bundle(for: EKImageProvider.self).url(forResource: "EKBlurAlertAssets", withExtension: "bundle") {
             
             if let bundle = Bundle(url: bundleURL) {
                 
-                ImageProvider.bundle = bundle
+                EKImageProvider.bundle = bundle
             }
         }
     }()

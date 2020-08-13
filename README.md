@@ -1,7 +1,8 @@
 # EK Blur Alert
 
+[![Swift Version](https://img.shields.io/badge/Swift-5.2-green.svg)](https://swift.org) ![Cocoapods](https://img.shields.io/cocoapods/v/EKBlurAlert.svg) [![Build Status](https://travis-ci.com/emvakar/EKBlurAlert.svg?branch=master)](https://travis-ci.com/emvakar/EKBlurAlert) [![GitHub license](https://img.shields.io/github/license/emvakar/EKBlurAlert.svg)](https://github.com/emvakar/EKBlurAlert/blob/master/LICENSE) [![GitHub release](https://img.shields.io/github/release/emvakar/EKBlurAlert.svg)](https://GitHub.com/emvakar/EKBlurAlert/releases/)
 
-Create an EK Blur Alert View for light actions in iOS Apps.
+Create an EK Blur Alert View for light actions in iOS Apps like iOS Music application.
 
 EK Blur Alert View is a framework created to recreate Apple's private Modal Status View.
 While designing iOS apps we may want to alert the user to a successful completion of a task.
@@ -10,12 +11,18 @@ This framework will help you to make the same hints as in applications from Appl
 
 Apple's solution is to display a self-removing and small modal view to the screen.
 
-![text](https://raw.githubusercontent.com/emvakar/EKBlurAlert/master/music%20app%20template.png "Apple's custom use of Modal Status Views")
+![text](https://raw.githubusercontent.com/emvakar/EKBlurAlert/master/Previews/music_app_template.png "Apple's custom use of Modal Status Views")
 
 With uses in the News app, the Apple Music app, and the Podcasts app, developers have been wanting access to this view for a while now.
 That is what this framework solves.
 
 ## Install
+
+### Swift Package Manager
+```swift
+
+    .package(url: "https://github.com/emvakar/EKBlurAlert.git", from: "2.0.0")
+```
 
 ### Cocoapods
 ```ruby
@@ -35,7 +42,7 @@ Empty setup with test parameters simple:
 ```swift
 import EKBlurAlert
 
-let alertView = EKBlurAlertView(frame: self.view.bounds)
+let alertView = EKBlurAlertView(frame: view.bounds)
 view.addSubview(alertView)
 ```
 
@@ -45,7 +52,7 @@ Or fully customize the EKBlurAlertView with the following parameters:
 import EKBlurAlert
 
 func presentBluredAlertView() {
-    let alertView = EKBlurAlertView(frame: self.view.bounds,
+    let alertView = EKBlurAlertView(frame: view.bounds,
                                     titleFont: UIFont.systemFont(ofSize: 17),
                                     subTitleFont: UIFont.systemFont(ofSize: 17),
                                     image: UIImage(),

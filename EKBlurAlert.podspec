@@ -28,7 +28,7 @@ s.framework = "UIKit"
 s.dependency 'SnapKit'
 
 # 8
-s.source_files = "EKBlurAlert/**/*.{swift}"
+s.source_files = "Sources/EKBlurAlert/**/*.{swift}"
 
 # 9
 #s.resources = "EKBlurAlert/**/*.{png,jpeg,jpg,storyboard,xib}"

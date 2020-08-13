@@ -3,5 +3,6 @@ osx_image: xcode11.6
 notifications:
   slack: eskaria:RRTsJOW40z95SajyTLBy7lxy
 script:
-  - swift build
-  - swift test
+  - swift package generate-xcodeproj
+  - xcodebuild build -sdk iphoneos -scheme 'EKBlurAlert-Package'
+  - xcodebuild test -destination 'name=iPhone 8' -scheme 'EKBlurAlert-Package'
